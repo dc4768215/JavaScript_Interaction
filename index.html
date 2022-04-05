@@ -3,21 +3,25 @@
 <head>
 <meta charset=utf-8 />
 <title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-  <script src="functions.js" charset="utf-8"></script>
-  <label>Half this number...
+
+  <label id="labels">Half this number...
     <input type="number" id="half-input">
   </label>
   <button id="half-button">Calculate</button>
   <br><br>
 
-  <label>Give me your name and I'll give you a fortune...
+  <label id="labels">Give me your name and I'll give you a fortune...
     <input id="fortune-input">
   </label>
   <button id="fortune-button">Get Fortune</button>
   <br><br>
   <div id="fortune-output"></div>
-
+<script src="functions.js" charset="utf-8"></script>
 </body>
 </html>
