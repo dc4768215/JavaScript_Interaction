@@ -1,10 +1,8 @@
 html {
   margin: 40px;
   padding: 40px;
-  background-color: blue;
 }
 #labels {
   font-family: 'Bebas Neue', cursive;
   font-size: 60px;
-  color: white;
 }

@@ -1,31 +1,25 @@
-var numButton;
-var numInput;
 var fortuneButton;
 var fortuneInput;
 var fortuneOutput;
 var text;
 
+var traits = ["understanding", "detail oriented", "brave", "caring", "bold", "silly", "sweet", "cool", "unique"];
+
 document.addEventListener("DOMContentLoaded", function(){
-  numButton = document.getElementById("half-button");
-  numInput = document.getElementById("half-input");
   fortuneButton = document.getElementById("fortune-button");
   fortuneInput = document.getElementById("fortune-input");
   fortuneOutput = document.getElementById("fortune-output");
-  text = document.getElementById("text");
-}
+  text = document.getElementById("outputText");
 
-numButton.addEventListener("click", displayNum(){
-  var initalNum = numInput.value();
-  displayNum(initalNum);
-}
-function displayNum(num) {
-  newNum = num / 2;
-  alert(newNum);
-}
+  fortuneButton.addEventListener("click", function(){
+    var fortuneOutput = fortuneInput.value;
+    displayTrait(fortuneOutput);
+  });
 
-/*
-var nameInput = document.getElementById("fortune-button").value;
-document.getElementById("fortune-button").addEventListener("click", displayFortune);
-function displayFortune() {
-  alert(nameInput + "will have a sweet day!");
-}*/
+
+});
+function displayTrait(name) {
+  var givenTrait = name + " is ";
+  givenTrait += traits[Math.floor(Math.random() * traits.length)] + ".";
+  text.innerText = givenTrait;
+}
